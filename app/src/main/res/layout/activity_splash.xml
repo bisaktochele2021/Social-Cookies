@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#050505"
+    android:clipChildren="false">
+
+    <!-- Expanding Background Circle -->
+    <View
+        android:id="@+id/v_bg_circle"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:background="@drawable/glass_background_circle"
+        android:backgroundTint="#0F4C81"
+        android:alpha="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Outer Rotating Ring -->
+    <View
+        android:id="@+id/v_glow_ring"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@drawable/glass_background_circle"
+        android:alpha="0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_splash_icon"
+        app:layout_constraintEnd_toEndOf="@+id/iv_splash_icon"
+        app:layout_constraintStart_toStartOf="@+id/iv_splash_icon"
+        app:layout_constraintTop_toTopOf="@+id/iv_splash_icon" />
+
+    <!-- Center App Icon -->
+    <ImageView
+        android:id="@+id/iv_splash_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:contentDescription="@string/app_name"
+        android:alpha="0.0"
+        android:background="@drawable/glass_background"
+        android:padding="12dp"
+        android:elevation="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <!-- App Title (Masked effect container) -->
+    <LinearLayout
+        android:id="@+id/ll_text_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:clipChildren="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_splash_icon">
+
+        <TextView
+            android:id="@+id/tv_splash_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:alpha="0.0" />
+
+        <TextView
+            android:id="@+id/tv_splash_tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/splash_tagline"
+            android:textColor="#88FFFFFF"
+            android:textSize="14sp"
+            android:letterSpacing="0.1"
+            android:alpha="0.0" />
+    </LinearLayout>
+
+    <!-- Bottom Footer -->
+    <TextView
+        android:id="@+id/tv_splash_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="SECURE &amp; ENCRYPTED"
+        android:textColor="#44FFFFFF"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.2"
+        android:alpha="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

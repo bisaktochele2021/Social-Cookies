@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Cookie icon with a binary touch -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M54,20c-18.8,0 -34,15.2 -34,34s15.2,34 34,34s34,-15.2 34,-34S72.8,20 54,20zM40,35c2.2,0 4,1.8 4,4s-1.8,4 -4,4s-4,-1.8 -4,-4S37.8,35 40,35zM35,55c1.7,0 3,1.3 3,3s-1.3,3 -3,3s-3,-1.3 -3,-3S33.3,55 35,55zM50,70c2.8,0 5,2.2 5,5s-2.2,5 -5,5s-5,-2.2 -5,-5S47.2,70 50,70zM70,55c2.2,0 4,1.8 4,4s-1.8,4 -4,4s-4,-1.8 -4,-4S67.8,55 70,55zM60,35c1.7,0 3,1.3 3,3s-1.3,3 -3,3s-3,-1.3 -3,-3S58.3,35 60,35z" />
+    <!-- Binary 1s and 0s stylized inside or around -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M25,25h2v6h-2zM30,25h6v2h-6zM30,31h6v-2h-6zM30,27h2v2h-2zM36,27h2v2h-2z" />
+</vector>

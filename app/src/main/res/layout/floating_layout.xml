@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:id="@+id/floating_window_content"
+        android:layout_width="320dp"
+        android:layout_height="480dp"
+        android:orientation="vertical"
+        android:background="@drawable/glass_background"
+        android:elevation="8dp">
+
+        <!-- Top Bar (Header) -->
+        <RelativeLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp">
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ig_cookies"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_centerVertical="true" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_refresh"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="9dp"
+                    android:scaleType="fitCenter"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/cd_refresh"
+                    android:src="@drawable/ic_refresh"
+                    app:tint="#CCFFFFFF" />
+
+                <ImageButton
+                    android:id="@+id/btn_minimize"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="9dp"
+                    android:scaleType="fitCenter"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/cd_minimize"
+                    android:src="@drawable/ic_minimize"
+                    app:tint="#CCFFFFFF" />
+
+                <ImageButton
+                    android:id="@+id/btn_close"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:padding="9dp"
+                    android:scaleType="fitCenter"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/cd_close"
+                    android:src="@drawable/ic_close"
+                    app:tint="#CCFFFFFF" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/web_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:max="100"
+            android:visibility="gone"
+            android:progressDrawable="@drawable/progress_bar_custom" />
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Pro Slim Dock (Simplified: Removed Link and Night Mode) -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:background="@drawable/glass_background_pill"
+                android:gravity="center"
+                android:elevation="4dp">
+
+                <!-- Navigation Group -->
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_back"
+                    android:contentDescription="@string/cd_back"
+                    app:tint="#CCFFFFFF" />
+
+                <ImageButton
+                    android:id="@+id/btn_home"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_home"
+                    android:contentDescription="@string/cd_home"
+                    app:tint="#CCFFFFFF" />
+
+                <View android:layout_width="1dp" android:layout_height="16dp" android:background="#22FFFFFF" android:layout_marginHorizontal="8dp" />
+
+                <!-- Tools -->
+
+                <ImageButton
+                    android:id="@+id/btn_auto_worker"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_auto_worker"
+                    android:contentDescription="@string/auto_worker"
+                    app:tint="#CCFFFFFF" />
+
+                <ImageButton
+                    android:id="@+id/btn_save_to_sheet"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_sheet"
+                    android:contentDescription="@string/save_to_google_sheet"
+                    app:tint="#CCFFFFFF" />
+
+                <ImageButton
+                    android:id="@+id/btn_desktop"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_desktop"
+                    android:contentDescription="@string/cd_desktop"
+                    app:tint="#CCFFFFFF" />
+
+                <View android:layout_width="1dp" android:layout_height="16dp" android:background="#22FFFFFF" android:layout_marginHorizontal="8dp" />
+
+                <!-- Main Actions -->
+                <ImageButton
+                    android:id="@+id/btn_copy_cookies"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_copy"
+                    android:contentDescription="@string/copy_cookies"
+                    app:tint="#FFFFFF" />
+
+                <ImageButton
+                    android:id="@+id/btn_clear_data"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_delete"
+                    android:contentDescription="@string/clear_data"
+                    app:tint="#FF5252" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Minimized Icon -->
+    <ImageView
+        android:id="@+id/minimized_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/minimize_windows"
+        android:src="@mipmap/ic_launcher_round"
+        android:background="@drawable/glass_background_circle"
+        android:visibility="gone"
+        android:padding="8dp"
+        android:elevation="12dp" />
+
+</FrameLayout>

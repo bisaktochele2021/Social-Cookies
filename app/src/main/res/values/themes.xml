@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme with NoActionBar for consistent custom headers. -->
+    <style name="Theme.IGCookies" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#1877F2</item>
+        <item name="colorPrimaryVariant">#0D47A1</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#E1306C</item>
+        <item name="colorSecondaryVariant">#C13584</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar and Navigation bar color. -->
+        <item name="android:statusBarColor">#121212</item>
+        <item name="android:navigationBarColor">#1E1E1E</item>
+        <item name="android:windowBackground">#121212</item>
+    </style>
+</resources>
